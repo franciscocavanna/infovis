@@ -12,6 +12,7 @@
     h1{margin:0 0 6px;font-size:clamp(24px,4vw,34px)}
     p.lead{margin:0;color:var(--muted)}
     main{max-width:960px;margin:18px auto 56px;padding:0 12px}
+
     /* Lista de pasos */
     .list{display:grid;gap:10px;margin-top:16px}
     .row{display:flex;align-items:center;gap:16px;padding:14px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;
@@ -24,11 +25,19 @@
     .tool{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:var(--pill);color:#4338ca;font-size:12px}
     .cta{white-space:nowrap;border:1px solid var(--line);padding:8px 12px;border-radius:10px;background:#fff}
     .arrow{margin-left:8px}
-    footer{padding:20px 16px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Paneles de cierre */
+    .panel{background:#fff;border:1px solid #e6e6e9;border-radius:14px;padding:18px;margin:22px 0}
+    .panel h2{margin:0 0 10px}
+    .kpis{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 6px}
+    .kpi{background:#eef2ff;color:#4338ca;border:1px solid #dfe3f5;border-radius:10px;padding:6px 10px;font-size:14px}
+
     /* Responsivo */
     @media (max-width:560px){
       .desc{display:none} .tool{margin-left:6px}
     }
+
+    footer{padding:20px 16px;text-align:center;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
@@ -38,45 +47,87 @@
   </header>
 
   <main>
-    <!-- Paso 1 -->
-    <a class="row" href="/infovis/prototipo/rawgraphs.html?v=1">
-      <div class="step">1</div>
-      <div class="txt">
-        <p class="title">Sueño <span class="tool">RAWGraphs</span></p>
-        <p class="desc">Horas de sueño a lo largo del período analizado.</p>
-      </div>
-      <div class="cta">Abrir<span class="arrow">→</span></div>
-    </a>
+    <div class="list">
+      <!-- Paso 1 -->
+      <a class="row" href="/infovis/prototipo/rawgraphs.html?v=1">
+        <div class="step">1</div>
+        <div class="txt">
+          <p class="title">Sueño <span class="tool">RAWGraphs</span></p>
+          <p class="desc">Horas de sueño a lo largo del período analizado.</p>
+        </div>
+        <div class="cta">Abrir<span class="arrow">→</span></div>
+      </a>
 
-    <!-- Paso 2 -->
-    <a class="row" href="/infovis/prototipo/datawrapper.html?v=1">
-      <div class="step">2</div>
-      <div class="txt">
-        <p class="title">Redes <span class="tool">Datawrapper</span></p>
-        <p class="desc">Uso de redes sociales (tiempo total y/o por plataforma).</p>
-      </div>
-      <div class="cta">Abrir<span class="arrow">→</span></div>
-    </a>
+      <!-- Paso 2 -->
+      <a class="row" href="/infovis/prototipo/datawrapper.html?v=1">
+        <div class="step">2</div>
+        <div class="txt">
+          <p class="title">Redes <span class="tool">Datawrapper</span></p>
+          <p class="desc">Uso de redes sociales (tiempo total y/o por plataforma).</p>
+        </div>
+        <div class="cta">Abrir<span class="arrow">→</span></div>
+      </a>
 
-    <!-- Paso 3 -->
-    <a class="row" href="/infovis/prototipo/flourish.html?v=1">
-      <div class="step">3</div>
-      <div class="txt">
-        <p class="title">Deportes <span class="tool">Flourish</span></p>
-        <p class="desc">Deportes practicados y su distribución.</p>
-      </div>
-      <div class="cta">Abrir<span class="arrow">→</span></div>
-    </a>
+      <!-- Paso 3 -->
+      <a class="row" href="/infovis/prototipo/flourish.html?v=1">
+        <div class="step">3</div>
+        <div class="txt">
+          <p class="title">Deportes <span class="tool">Flourish</span></p>
+          <p class="desc">Deportes practicados y su distribución.</p>
+        </div>
+        <div class="cta">Abrir<span class="arrow">→</span></div>
+      </a>
 
-    <!-- Paso 4 -->
-    <a class="row" href="/infovis/prototipo/powerbi.html?v=1">
-      <div class="step">4</div>
-      <div class="txt">
-        <p class="title">Sueño vs Deporte <span class="tool">Power BI</span></p>
-        <p class="desc">Relación entre horas de deporte y horas de sueño.</p>
+      <!-- Paso 4 -->
+      <a class="row" href="/infovis/prototipo/powerbi.html?v=1">
+        <div class="step">4</div>
+        <div class="txt">
+          <p class="title">Sueño vs Deporte <span class="tool">Power BI</span></p>
+          <p class="desc">Relación entre horas de deporte y horas de sueño.</p>
+        </div>
+        <div class="cta">Abrir<span class="arrow">→</span></div>
+      </a>
+    </div>
+
+    <!-- CIERRE / HALLAZGOS -->
+    <section class="panel" aria-label="Conclusiones">
+      <h2>Qué aprendí</h2>
+      <div class="kpis">
+        <span class="kpi">Promedio de sueño: <strong>7.38 h</strong></span>
+        <span class="kpi">Promedio de deporte: <strong>1.34 h</strong></span>
+        <span class="kpi">Período analizado: <strong>20 días</strong></span>
       </div>
-      <div class="cta">Abrir<span class="arrow">→</span></div>
-    </a>
+      <ul style="margin:8px 0 0; padding-left:18px; color:#444">
+        <li>La distribución de <strong>sueño</strong> muestra algunos días por debajo de 6h.</li>
+        <li>En <strong>redes</strong> hay picos puntuales (hipótesis: influyen en las noches cortas).</li>
+        <li>Los <strong>deportes</strong> se concentran en Paddle y Rugby; correr aparece estable.</li>
+        <li>La comparación sugiere una <strong>correlación positiva</strong> entre horas de deporte y horas de sueño (no implica causalidad).</li>
+      </ul>
+    </section>
+
+    <!-- PRÓXIMOS PASOS -->
+    <section class="panel" aria-label="Próximos pasos">
+      <h2>Próximos pasos</h2>
+      <ul style="margin:8px 0 0; padding-left:18px; color:#444">
+        <li>Separar días con <em>uso de celular antes de dormir</em> y medir el delta de sueño.</li>
+        <li>Agregar más semanas para validar la tendencia deporte → sueño.</li>
+        <li>Definir objetivo (8h) y trackear <strong>% de días ≥ 8h</strong>.</li>
+      </ul>
+      <p style="margin:10px 0 0; font-size:14px; color:#666">
+        Recursos: <a href="/infovis/prototipo/powerbi.html?v=1">ver tablero en Power BI</a>
+        <!-- · <a href="/infovis/data/HabitosPowerBI_clean.xlsx">descargar datos</a> -->
+      </p>
+    </section>
+
+    <!-- METODOLOGÍA -->
+    <details class="panel" aria-label="Metodología y datos">
+      <summary><strong>Metodología y datos</strong></summary>
+      <p style="margin:10px 0 0; color:#444">
+        Registros personales (20 días). Limpieza y modelado en Google Sheets / Power BI (tabla <em>Base_Scatter</em>).
+        Visualizaciones: RAWGraphs (Sueño), Datawrapper (Redes), Flourish (Deportes) y Power BI (Comparación Sueño vs Deporte).
+        Limitaciones: tamaño de muestra, autodeclaración y horarios irregulares.
+      </p>
+    </details>
   </main>
 
   <footer>© 2025 – Trabajo Practico de datos Personales</footer>
