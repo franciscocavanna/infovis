@@ -3,32 +3,64 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trabajo Práctico de datos Personales</title>
+  <title>Trabajo Practico de datos Personales</title>
   <style>
-    :root{--bg:#f7f7f8;--fg:#222;--muted:#666;--card:#fff;--border:#e6e6e9;--accent:#4f46e5}
+    :root{
+      --bg:#f7f7f8; --fg:#222; --muted:#666; --card:#fff;
+      --border:#e6e6e9; --accent:#4f46e5; --accent-2:#10b981;
+    }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
-    header{padding:40px 20px 10px;text-align:center}
+    html,body{margin:0;background:var(--bg);color:var(--fg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    header{padding:40px 20px 8px;text-align:center}
     h1{margin:0;font-size:clamp(24px,4vw,36px)}
-    p.lead{margin:8px 0 0;color:var(--muted)}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px 16px 56px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+    p.lead{margin:10px 0 0;color:var(--muted)}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 16px 60px}
+
+    /* Paso a paso (story) */
+    .steps{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px auto}
+    .step{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--border);
+      border-radius:999px;background:#fff;text-decoration:none;color:var(--fg)}
+    .step .num{width:24px;height:24px;border-radius:50%;display:inline-grid;place-items:center;
+      background:var(--accent);color:#fff;font-weight:600;font-size:12px}
+    .step:hover{border-color:#d9dafc;background:#f4f5ff}
+
+    /* Tarjetas */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;
+      box-shadow:0 2px 6px rgba(0,0,0,.06)}
     .card h3{margin:0 0 6px}
     .card p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.35}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);text-decoration:none;color:#fff;background:var(--accent)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);
+      text-decoration:none;color:#fff;background:var(--accent)}
     .btn.ghost{background:#fff;color:var(--fg)}
+
+    /* Secciones de narrativa extra (opcionales) */
+    .section{background:#fff;border:1px solid var(--border);border-radius:14px;margin:26px 0;padding:18px}
+    .section h2{margin:0 0 10px}
+    .bullets{display:grid;gap:8px}
+    .bullets li{margin-left:18px;color:#444}
+
     footer{padding:22px 16px;text-align:center;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
   <header>
-    <h1>Trabajo Práctico de datos Personales</h1>
+    <h1>Trabajo Practico de datos Personales</h1>
     <p class="lead">Análisis de mis hábitos personales</p>
   </header>
 
   <main class="wrap">
-    <section class="grid">
+    <!-- Storytelling: recorrido en 4 pasos -->
+    <nav class="steps" aria-label="Recorrido">
+      <a class="step" href="/infovis/prototipo/rawgraphs.html?v=1"><span class="num">1</span> Sueño</a>
+      <a class="step" href="/infovis/prototipo/datawrapper.html?v=1"><span class="num">2</span> Redes</a>
+      <a class="step" href="/infovis/prototipo/flourish.html?v=1"><span class="num">3</span> Deportes</a>
+      <a class="step" href="/infovis/prototipo/powerbi.html?v=1"><span class="num">4</span> Sueño vs Deporte</a>
+    </nav>
+
+    <!-- Tarjetas, en el orden solicitado -->
+    <section class="grid" aria-label="Accesos rápidos">
       <!-- 1) RAWGraphs -->
       <article class="card">
         <h3>RAWGraphs</h3>
@@ -57,8 +89,37 @@
         <a class="btn" href="/infovis/prototipo/powerbi.html?v=1">Abrir Power BI</a>
       </article>
     </section>
+
+    <!-- (Opcional) Introducción al relato -->
+    <section class="section" aria-label="Guía de lectura">
+      <h2>Cómo leer este trabajo</h2>
+      <ul class="bullets">
+        <li><strong>Paso 1 – Sueño:</strong> mirá la distribución y los días que superan 8 horas.</li>
+        <li><strong>Paso 2 – Redes:</strong> identificá picos de uso y la app que más consume tiempo.</li>
+        <li><strong>Paso 3 – Deportes:</strong> qué actividades hice y cómo se reparte el tiempo.</li>
+        <li><strong>Paso 4 – Comparación:</strong> ¿más deporte se asocia con mejor descanso?</li>
+      </ul>
+    </section>
+
+    <!-- (Opcional) Cierre / hallazgos (completalo cuando tengas los números finales) -->
+    <section class="section" aria-label="Conclusiones">
+      <h2>Qué aprendí</h2>
+      <ul class="bullets">
+        <li>Promedio de sueño: <strong><!-- ej: 7.4 h --></strong></li>
+        <li>Promedio de deporte (días con actividad): <strong><!-- ej: 1.3 h --></strong></li>
+        <li>Indicios de relación positiva entre horas de deporte y horas de sueño.</li>
+        <li>Pendiente: evaluar el impacto del <em>uso del celular antes de dormir</em>.</li>
+      </ul>
+      <small style="color:#666">Nota: correlación no implica causalidad.</small>
+    </section>
+
+    <!-- (Opcional) Metodología -->
+    <section class="section" aria-label="Metodología y datos">
+      <h2>Metodología y datos</h2>
+      <p>Registros personales durante un período determinado. Limpieza y modelado en Google Sheets / Power BI (tabla <em>Base_Scatter</em>). Visualizaciones: RAWGraphs (Sueño), Datawrapper (Redes), Flourish (Deportes) y Power BI (Comparación Sueño vs Deporte).</p>
+    </section>
   </main>
 
-  <footer>© 2025 – Trabajo Práctico de datos Personales</footer>
+  <footer>© 2025 – Trabajo Practico de datos Personales</footer>
 </body>
 </html>
