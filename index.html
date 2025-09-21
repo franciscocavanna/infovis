@@ -5,108 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Infovis – Prototipos</title>
   <style>
-    :root{
-      --bg:#f7f7f8; --fg:#222; --muted:#666; --card:#ffffff;
-      --border:#e6e6e9; --accent:#4f46e5;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
-    header{padding:40px 20px 24px;text-align:center}
-    header h1{margin:0;font-size:clamp(24px,4vw,36px);letter-spacing:.2px}
-    header p{margin:10px 0 0;color:var(--muted)}
-    nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0 8px}
-    nav a{display:inline-block;padding:10px 16px;border:1px solid var(--border);border-radius:999px;background:#fff;color:var(--fg);text-decoration:none}
-    nav a:hover{background:#f0f0ff;border-color:#d8d8ff}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 16px 56px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:18px auto 28px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
-    .card h3{margin:4px 0 8px;font-size:18px}
-    .card p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.35}
-    .card .btns{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{padding:9px 12px;border-radius:10px;border:1px solid var(--border);text-decoration:none;color:var(--fg);background:#fff}
-    .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-    .section{background:#fff;border:1px solid var(--border);border-radius:14px;margin:26px 0;padding:18px}
-    .section h2{margin:0 0 12px;text-align:center}
-    iframe{width:100%;height:600px;border:0;border-radius:10px;background:#fff}
-    footer{padding:22px 16px;color:var(--muted);text-align:center;font-size:14px}
+    :root{--bg:#f7f7f8;--fg:#222;--muted:#666;--card:#fff;--border:#e6e6e9;--accent:#4f46e5}
+    *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--fg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    header{padding:40px 20px 10px;text-align:center}
+    h1{margin:0;font-size:clamp(24px,4vw,36px)}
+    p.lead{margin:8px 0 0;color:var(--muted)}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 16px 56px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;
+      box-shadow:0 2px 6px rgba(0,0,0,.06)}
+    .card h3{margin:0 0 6px} .card p{margin:0 0 12px;color:var(--muted);font-size:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);
+      text-decoration:none;color:#fff;background:var(--accent)}
+    .btn.ghost{background:#fff;color:var(--fg)}
+    footer{padding:22px 16px;text-align:center;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
   <header>
     <h1>Infovis – Prototipos</h1>
-    <p>Análisis de mi día a día y pruebas con distintas herramientas</p>
-    <nav>
-      <a href="#powerbi">Power BI</a>
-      <a href="#flourish">Flourish</a>
-      <a href="#datawrapper">Datawrapper</a>
-      <a href="#rawgraphs">RAWGraphs</a>
-    </nav>
+    <p class="lead">Elegí una herramienta para abrirla en su propia página</p>
   </header>
 
   <main class="wrap">
-    <!-- Tarjetas de acceso rápido -->
-    <div class="grid" aria-label="Accesos rápidos">
+    <section class="grid">
       <article class="card">
         <h3>Power BI</h3>
-        <p>Dashboard deporte vs sueño. Embebido desde Power BI Service.</p>
-        <div class="btns">
-          <a class="btn primary" href="#powerbi">Ver embebido</a>
-          <a class="btn" href="/infovis/prototipo/powerbi.html?v=1" target="_blank">Abrir en pestaña</a>
-        </div>
+        <p>Dashboard deporte vs sueño embebido desde Power BI Service.</p>
+        <a class="btn" href="/infovis/prototipo/powerbi.html?v=1">Abrir Power BI</a>
       </article>
+
       <article class="card">
         <h3>Flourish</h3>
-        <p>Visualizaciones interactivas con plantillas prearmadas.</p>
-        <div class="btns">
-          <a class="btn primary" href="#flourish">Ver embebido</a>
-          <a class="btn" href="/infovis/prototipo/flourish.html?v=1" target="_blank">Abrir en pestaña</a>
-        </div>
+        <p>Visualizaciones interactivas con plantillas.</p>
+        <a class="btn" href="/infovis/prototipo/flourish.html?v=1">Abrir Flourish</a>
       </article>
+
       <article class="card">
         <h3>Datawrapper</h3>
-        <p>Gráficos rápidos y publicables para la web.</p>
-        <div class="btns">
-          <a class="btn primary" href="#datawrapper">Ver embebido</a>
-          <a class="btn" href="/infovis/prototipo/datawrapper.html?v=1" target="_blank">Abrir en pestaña</a>
-        </div>
+        <p>Gráficos publicables para la web.</p>
+        <a class="btn" href="/infovis/prototipo/datawrapper.html?v=1">Abrir Datawrapper</a>
       </article>
+
       <article class="card">
         <h3>RAWGraphs</h3>
         <p>Exploración visual desde CSV a múltiples formatos.</p>
-        <div class="btns">
-          <a class="btn primary" href="#rawgraphs">Ver embebido</a>
-          <a class="btn" href="/infovis/prototipo/rawgraphs.html?v=1" target="_blank">Abrir en pestaña</a>
-        </div>
+        <a class="btn" href="/infovis/prototipo/rawgraphs.html?v=1">Abrir RAWGraphs</a>
       </article>
-    </div>
-
-    <!-- Bloques embebidos (como en tu index actual) -->
-    <section class="section" id="powerbi">
-      <h2>Power BI</h2>
-      <iframe
-        title="datostp"
-        src="/infovis/prototipo/powerbi.html?v=1"
-        allowfullscreen="true"></iframe>
-    </section>
-
-    <section class="section" id="flourish">
-      <h2>Flourish</h2>
-      <iframe src="/infovis/prototipo/flourish.html?v=1"></iframe>
-    </section>
-
-    <section class="section" id="datawrapper">
-      <h2>Datawrapper</h2>
-      <iframe src="/infovis/prototipo/datawrapper.html?v=1"></iframe>
-    </section>
-
-    <section class="section" id="rawgraphs">
-      <h2>RAWGraphs</h2>
-      <iframe src="/infovis/prototipo/rawgraphs.html?v=1"></iframe>
     </section>
   </main>
 
-  <footer>
-    © 2025 – Infovis · Hecho con Power BI, Flourish, Datawrapper y RAWGraphs
-  </footer>
+  <footer>© 2025 – Infovis</footer>
 </body>
 </html>
