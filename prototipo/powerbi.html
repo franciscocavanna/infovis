@@ -3,15 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Power BI – Infovis</title>
+  <title>Sueño vs Deporte · Power BI</title>
   <style>
-    html,body{height:100%;margin:0;background:#fff}
-    iframe{width:100%;height:100%;border:0}
+    :root { --bg:#f6f7fb; --fg:#111827; --muted:#6b7280; --border:#e5e7eb; }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--fg);
+      font-family:system-ui,-apple-system,Inter,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:1200px;margin:28px auto;padding:0 16px}
+    h1{margin:0 0 4px;font-weight:800;line-height:1;font-size:clamp(28px,5vw,44px)}
+    .subtitle{margin:0 0 18px;color:var(--muted)}
+    .frame{background:#fff;border:1px solid var(--border);border-radius:16px;
+           box-shadow:0 2px 10px rgba(0,0,0,.05);padding:12px}
+    .frame iframe{display:block;width:100%;height:clamp(420px,70vh,860px);border:0;border-radius:10px;background:#fff}
+    .back{position:fixed;top:12px;left:12px;z-index:10}
+    .back a{display:inline-block;padding:8px 12px;border-radius:10px;border:1px solid var(--border);
+            background:#fff;color:#111827;text-decoration:none}
   </style>
 </head>
 <body>
-  <iframe title="datostp"
-          src="https://app.powerbi.com/view?r=eyJrIjoiNDdmMTAyYTgtOThlOS00YTlmLWIzNDctMzQ0ZWZlZjBkMjRiIiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&v=1"
-          allowfullscreen="true"></iframe>
+  <div class="back"><a href="/infovis/index.html">← Volver</a></div>
+
+  <header class="wrap">
+    <h1>Sueño vs Deporte</h1>
+    <p class="subtitle">Embebido desde Power BI</p>
+  </header>
+
+  <main class="wrap">
+    <div class="frame">
+      <iframe
+        title="datostp"
+        src="https://app.powerbi.com/view?r=eyJrIjoiNDdmMTAyYTgtOThlOS00YTlmLWIzNDctMzQ0ZWZlZjBkMjRiIiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9&v=2"
+        allowfullscreen="true">
+      </iframe>
+    </div>
+  </main>
 </body>
 </html>
