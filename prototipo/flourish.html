@@ -1,12 +1,45 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Horas Totales de Deporte · Flourish</title>
+  <style>
+    :root { --bg:#f6f7fb; --fg:#111827; --muted:#6b7280; --border:#e5e7eb; }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--fg);
+      font-family:system-ui,-apple-system,Inter,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:1200px;margin:28px auto;padding:0 16px}
+    h1{margin:0 0 4px;font-weight:800;line-height:1;font-size:clamp(28px,5vw,44px)}
+    .subtitle{margin:0 0 18px;color:var(--muted)}
+    .frame{background:#fff;border:1px solid var(--border);border-radius:16px;
+           box-shadow:0 2px 10px rgba(0,0,0,.05);padding:12px}
+    /* que el embed ocupe todo el ancho y se vea prolijo */
+    .frame .flourish-embed{display:block;width:100%;border-radius:10px;overflow:hidden}
+    .back{position:fixed;top:12px;left:12px;z-index:10}
+    .back a{display:inline-block;padding:8px 12px;border-radius:10px;border:1px solid var(--border);
+            background:#fff;color:#111827;text-decoration:none}
+  </style>
 </head>
 <body>
-  <h2 style="text-align:center; font-family:sans-serif; margin-bottom:20px; color:#333;">
-    Horas Totales de Deporte
-  </h2>
-<div class="flourish-embed flourish-bubble-chart" data-src="visualisation/24816390"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24816390/thumbnail" width="100%" alt="bubble-chart visualization" /></noscript></div>
- </html>
+  <div class="back"><a href="/infovis/index.html">← Volver</a></div>
+
+  <header class="wrap">
+    <h1>Horas Totales de Deporte</h1>
+    <p class="subtitle">Exportado desde Flourish</p>
+  </header>
+
+  <main class="wrap">
+    <div class="frame">
+      <!-- Tu visualización de Flourish -->
+      <div class="flourish-embed flourish-bubble-chart" data-src="visualisation/24816390">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript>
+          <img src="https://public.flourish.studio/visualisation/24816390/thumbnail"
+               width="100%" alt="bubble-chart visualization" />
+        </noscript>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
