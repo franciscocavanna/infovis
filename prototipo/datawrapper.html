@@ -1,13 +1,46 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Horas Totales en Redes Sociales · Datawrapper</title>
+  <style>
+    :root { --bg:#f6f7fb; --fg:#111827; --muted:#6b7280; --border:#e5e7eb; }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--fg);
+      font-family:system-ui,-apple-system,Inter,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:1200px;margin:28px auto;padding:0 16px}
+    h1{margin:0 0 4px;font-weight:800;line-height:1;font-size:clamp(28px,5vw,44px)}
+    .subtitle{margin:0 0 18px;color:var(--muted)}
+    .frame{background:#fff;border:1px solid var(--border);border-radius:16px;
+           box-shadow:0 2px 10px rgba(0,0,0,.05);padding:12px}
+    /* contenedor del embed */
+    .frame .dw-container{display:block;width:100%;border-radius:10px;overflow:hidden;min-height:420px;background:#fff}
+    .back{position:fixed;top:12px;left:12px;z-index:10}
+    .back a{display:inline-block;padding:8px 12px;border-radius:10px;border:1px solid var(--border);
+            background:#fff;color:#111827;text-decoration:none}
+  </style>
 </head>
 <body>
-    <!-- Título visible arriba del gráfico -->
-  <h2 style="text-align:center; font-family:sans-serif; margin-bottom:20px; color:#333;">
-   Horas Totales en Redes sociales
-  </h2>
-  <div style="min-height:423px" id="datawrapper-vis-Etb2l"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/Etb2l/embed.js" charset="utf-8" data-target="#datawrapper-vis-Etb2l"></script><noscript><img src="https://datawrapper.dwcdn.net/Etb2l/full.png" alt="Uso de redes sociales diario (Area Chart)" /></noscript></div>
+  <div class="back"><a href="/infovis/index.html">← Volver</a></div>
+
+  <header class="wrap">
+    <h1>Horas Totales en Redes Sociales</h1>
+    <p class="subtitle">Exportado desde Datawrapper</p>
+  </header>
+
+  <main class="wrap">
+    <div class="frame">
+      <!-- Tu visualización de Datawrapper -->
+      <div id="datawrapper-vis-Etb2l" class="dw-container">
+        <script defer src="https://datawrapper.dwcdn.net/Etb2l/embed.js"
+                charset="utf-8" data-target="#datawrapper-vis-Etb2l"></script>
+        <noscript>
+          <img src="https://datawrapper.dwcdn.net/Etb2l/full.png"
+               alt="Uso de redes sociales diario (Area Chart)" width="100%" />
+        </noscript>
+      </div>
+    </div>
+  </main>
+</body>
 </html>
